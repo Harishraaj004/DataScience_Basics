@@ -1,0 +1,141 @@
+#python class and method
+class laptop():
+    def __init__ (self):
+        self.ram=""
+        self.processor=""
+    def display (self):
+        print("ram",self.ram)
+        print("processor",self.processor)
+        
+    
+hp=laptop()
+dell=laptop()
+
+hp.ram="8gb"
+hp.processor="i5"
+
+dell.ram="16gb"
+dell.processor="i10"
+
+hp.display()
+dell.display()
+
+#class and constructors
+class goa():
+    def __init__ (self):
+        self.name=""
+        self.drink=""
+    def party(self):
+        print("lets party")
+    def beach(self):
+        print("enjoy beach")
+        
+ramesh = goa()
+suresh = goa()
+
+ramesh.name="Ramesh"
+suresh.name="Suresh"
+
+ramesh.drink="Yes"
+suresh.drink="No"
+"""
+print(ramesh.name)
+print("drink:",ramesh.drink)
+print(suresh.name)
+print("drink:",suresh.drink)"""
+
+ramesh.party()
+
+#constructor
+class student():
+    def __init__(self):
+        self.name=""
+        self.registerno=""
+    def display(self):
+        print("name is ",self.name)
+        print("register number is ",self.registerno)
+        
+ram=student()        
+
+ram.name="RAM"
+ram.registerno="123654"
+
+ram.display()
+
+#constructor and multiple values
+class teacher():
+    def __init__(self,name,regno):
+        self.name=name
+        self.regno=regno
+    def display(self):
+        print("the teacher name is ",self.name)
+        print("teacher registerno is ",self.regno)
+        
+t1=teacher("ram","123654")
+t2=teacher("sam","789456")
+
+
+t1.display()
+t2.display()
+
+class calculator():
+    def __init__(self,a,b):
+        self.num1=a
+        self.num2=b
+    def add(self):
+        print("addition:",self.num1+self.num2)
+    
+    
+t1=calculator(2,5)
+t1.add()
+        
+#python inheritance
+class grandpa():
+    def money(self):
+        print("grandpa's money")
+class dad(grandpa):
+    def phone(self):
+        print("dad's phone")
+class mom():
+    def sweet(self):
+        print("mom's sweet")
+class son(dad,mom):
+    def laptop(self):
+        print("son's laptop")
+        
+ram=son()
+ram.phone()
+perumal=dad()
+
+ram.sweet()
+
+#multiple inheritance
+class animal():
+    def sound(self):
+        print("animal makes sound")
+class dog(animal):
+    def sound(self):
+        print("dog barks")
+class birds(animal):
+    def sound(self):
+        print("birds sing")
+    
+d1=dog()
+d1.sound()
+d2=animal()
+d2.sound()     
+
+#python super_keyword
+class person():
+    def __init__(self,name):
+        self.name=name
+class student(person):
+    def __init__(self,grade):
+        self.grade=grade
+    @super().__init__()    
+    def display(self):
+        print(self.name,self.grade)
+        
+s1=student("A")        
+s1.display()
+        
